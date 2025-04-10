@@ -1,3 +1,6 @@
+const API_URL = process.env.API_URL || 'http://localhost:5000';
+return fetch(`${API_URL}/capture-order`);
+
 // 商品数据，存两个商品
   const products = [
     { id: 1, name: "Red Pot", code: "P001", price: 0.01},
@@ -104,7 +107,7 @@ paypal.Buttons({
         const amount= cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
         // 调用后端API创建订单
-        return fetch(`http://localhost:5000/create-order`, {
+        return fetch(`${API_URL}/create-order`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -123,7 +126,7 @@ paypal.Buttons({
 
     // 订单批准后
      onApprove: function(data, actions) {
-        return fetch(`http://localhost:5000/capture-order` ,{
+        return fetch(`${API_URL}/capture-order` ,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
