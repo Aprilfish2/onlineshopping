@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # 设置工作目录
-WORKDIR /app
+WORKDIR /onlineshopping
 
 # 复制要求和应用代码
 COPY requirements.txt .
