@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests
+import os
+API_HOST = os.environ.get('API_HOST', '0.0.0.0')  # 默认是 0.0.0.0
+app.run(debug=True, host=API_HOST, port=5000)
 
 app = Flask(__name__)
 # 允许跨域请求
