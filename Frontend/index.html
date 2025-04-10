@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- PayPal JS SDK -->
+    <script src="https://www.sandbox.paypal.com/sdk/js?client-id=AeBKHK1dVEjRzDyotOZ6M4QKSDYzEdZUp_3Lxi15v5Rv6NolvnUq0BnngIZsAT7volLfhgtX5o0SQybN&currency=USD"></script>
+</head>
+<body>
+    <!-- 商品列表 -->
+    <div class="products-container">
+        <h2>商品列表</h2>
+        <div id="products-grid">
+        </div>
+    </div>
+
+    <!-- 购物车 -->
+    <div class="cart-section">
+        <h2>购物车</h2>
+        <div id="cart-items"></div>
+        <div class="total">
+            总计: <span id="total-amount">$0.00</span>
+        </div>
+    </div>
+
+        <!-- 买家信息 -->
+        <div class="buyer-section">
+            <h2>买家信息</h2>
+            <form id="buyerForm">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" value="april" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" value="ran" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="april.ran@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" value="408-555-1234" required>
+                </div>
+                <div class="form-group">
+                    <label for="address1">Address Line 1:</label>
+                    <input type="text" id="address1" value="123 Main Street" required>
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address Line 2:</label>
+                    <input type="text" id="address2" value="Apt 1">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" value="San Jose" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" value="CA" required>
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">ZIP Code:</label>
+                    <input type="text" id="zipCode" value="95131" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" value="US" required>
+                </div>
+            </form>
+        </div>
+
+        <!-- PayPal按钮容器 -->
+        <div id="paypal-button-container"></div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
